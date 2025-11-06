@@ -1,0 +1,78 @@
+# config.yaml
+
+## Where the samples will be written
+save_data: NMT_small
+
+# Training files
+data:
+    corpus_1:
+        path_src: dataset/train_test_split/en-te.en.subword.train
+        path_tgt: dataset/train_test_split/en-te.te.subword.train
+        transforms: [filtertoolong]
+    valid:
+        path_src: dataset/train_test_split/en-te.en.subword.dev
+        path_tgt: dataset/train_test_split/en-te.te.subword.dev
+        transforms: [filtertoolong]
+
+# Vocabulary files (you can still include .vocab files if already built)
+src_vocab: models/SW_model/source.vocab
+tgt_vocab: models/SW_model/target.vocab
+
+# Subword models (SentencePiece)
+src_subword_model: models/SW_model/source.model
+tgt_subword_model: models/SW_model/target.model
+
+# Logging and output
+log_file: train_small.log
+save_model: models/small_model.en-te
+
+# Early stopping
+early_stopping: 2
+
+# Training parameters
+train_steps: 1000
+valid_steps: 500
+save_checkpoint_steps: 500
+report_every: 50
+
+seed: 3435
+
+# Device setup (CPU only)
+world_size: 1
+gpu_ranks: [0]   # empty → CPU
+model_dtype: "fp32"
+
+# Batching (smaller for CPU)
+batch_type: "tokens"
+batch_size: 1024
+valid_batch_size: 512
+num_workers: 0
+
+# Optimization
+optim: "adam"
+learning_rate: 2.0
+decay_method: "noam"
+warmup_steps: 400
+adam_beta2: 0.998
+max_grad_norm: 0
+label_smoothing: 0.1
+param_init: 0
+param_init_glorot: true
+normalization: "tokens"
+
+# Model (lightweight Transformer)
+encoder_type: transformer
+decoder_type: transformer
+position_encoding: true
+enc_layers: 2
+dec_layers: 2
+heads: 4
+hidden_size: 256
+word_vec_size: 256
+transformer_ff: 1024
+dropout: [0.2]
+attention_dropout: [0.2]
+self_attn_type: scaled-dot  
+# Filter out long sequences
+src_seq_length: 100
+tgt_seq_length: 100
