@@ -1,0 +1,15 @@
+[2025-10-12 12:52:56,927 INFO] Missing transforms field for corpus_1 data, set to default: [].
+[2025-10-12 12:52:56,929 WARNING] Corpus corpus_1's weight should be given. We default it to 1 for you.
+[2025-10-12 12:52:56,929 INFO] Missing transforms field for valid data, set to default: [].
+[2025-10-12 12:55:32,827 INFO] Missing transforms field for corpus_1 data, set to default: [].
+[2025-10-12 12:57:09,677 INFO] Missing transforms field for corpus_1 data, set to default: [].
+[2025-10-12 12:57:09,680 WARNING] Corpus corpus_1's weight should be given. We default it to 1 for you.
+[2025-10-12 12:57:09,680 INFO] Missing transforms field for valid data, set to default: [].
+[2025-10-12 12:57:09,682 INFO] Parsed 2 corpora from -data.
+[2025-10-12 12:57:57,510 INFO] Missing transforms field for corpus_1 data, set to default: [].
+[2025-10-12 12:57:57,512 WARNING] Corpus corpus_1's weight should be given. We default it to 1 for you.
+[2025-10-12 12:57:57,512 INFO] Missing transforms field for valid data, set to default: [].
+[2025-10-12 12:57:57,513 INFO] Parsed 2 corpora from -data.
+[2025-10-12 12:57:57,513 INFO] Get special vocabs from Transforms: {'src': [], 'tgt': []}.
+[2025-10-25 18:56:23,941 INFO] Missing transforms field for corpus_1 data, set to default: [].
+[2025-10-25 19:12:44,846 INFO] Missing transforms field for corpus_1 data, set to default: [].
