@@ -39,7 +39,7 @@ seed: 3435
 
 # Device setup (CPU only)
 world_size: 1
-gpu_ranks: [0]   # empty → CPU
+gpu_ranks: [0]   # empty → CPU or gpu
 model_dtype: "fp32"
 
 # Batching (smaller for CPU)
